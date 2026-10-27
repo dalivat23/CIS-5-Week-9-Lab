@@ -4,8 +4,6 @@
 // CIS 5 Week 09 · Call and return
 // Homework continues this program. Do not start a second file.
 
-// TODO: double average(const int a[], int n);
-// TODO: void printSummary(double avg);
 
 double average(const int a[], int n);
 void printSummary(double avg);
@@ -18,20 +16,22 @@ int main() {
 
   printSummary(avg);
   
-  // TODO: double avg = average(scores, N);
-  // TODO: printSummary(avg);
   return 0;
 }
 
 double average(const int a[], int n){
-  double sum = 0;
-  for (int i = 0; i < n; ++i) {
-sum += a[i];
+  if (n == 0){
+    return 0;
   }
-
-  return sum / n; 
+  
+  int sum = 0;
+  for (int i = 0; i < n; ++i){
+  sum += a[i];
 }
 
-void printSummary(double avg) {
-  std::cout << "Average: " << avg << endl;
+  return sum / n;
+}
+
+void printSummary(double avg){
+  std::cout << "Average: " << avg << std::endl;
 }
